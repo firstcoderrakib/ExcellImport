@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.textBoxCompanyName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.CompanyIDlistBox = new System.Windows.Forms.ListBox();
+            this.labelcompany = new System.Windows.Forms.Label();
+            this.ConpanyIDlistBox = new System.Windows.Forms.ListBox();
             this.FileTextBox = new System.Windows.Forms.TextBox();
             this.buttonSelectFile = new System.Windows.Forms.Button();
             this.buttonResetMessage = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
             this.buttonItemName = new System.Windows.Forms.Button();
             this.buttonCustomer = new System.Windows.Forms.Button();
             this.buttonSupplier = new System.Windows.Forms.Button();
+            this.Label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxCompanyName
@@ -51,23 +52,23 @@
             this.textBoxCompanyName.Size = new System.Drawing.Size(293, 20);
             this.textBoxCompanyName.TabIndex = 0;
             // 
-            // label1
+            // labelcompany
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Company Name";
+            this.labelcompany.AutoSize = true;
+            this.labelcompany.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcompany.Location = new System.Drawing.Point(15, 25);
+            this.labelcompany.Name = "labelcompany";
+            this.labelcompany.Size = new System.Drawing.Size(122, 19);
+            this.labelcompany.TabIndex = 1;
+            this.labelcompany.Text = "Company Name";
             // 
-            // CompanyIDlistBox
+            // ConpanyIDlistBox
             // 
-            this.CompanyIDlistBox.FormattingEnabled = true;
-            this.CompanyIDlistBox.Location = new System.Drawing.Point(164, 51);
-            this.CompanyIDlistBox.Name = "CompanyIDlistBox";
-            this.CompanyIDlistBox.Size = new System.Drawing.Size(293, 95);
-            this.CompanyIDlistBox.TabIndex = 2;
+            this.ConpanyIDlistBox.FormattingEnabled = true;
+            this.ConpanyIDlistBox.Location = new System.Drawing.Point(164, 51);
+            this.ConpanyIDlistBox.Name = "ConpanyIDlistBox";
+            this.ConpanyIDlistBox.Size = new System.Drawing.Size(293, 95);
+            this.ConpanyIDlistBox.TabIndex = 2;
             // 
             // FileTextBox
             // 
@@ -106,6 +107,7 @@
             this.buttonImportHSCode.TabIndex = 6;
             this.buttonImportHSCode.Text = "Import HS Code";
             this.buttonImportHSCode.UseVisualStyleBackColor = true;
+            this.buttonImportHSCode.Click += new System.EventHandler(this.buttonImportHSCode_Click);
             // 
             // buttonCostLedger
             // 
@@ -156,6 +158,7 @@
             this.buttonItemName.TabIndex = 11;
             this.buttonItemName.Text = "Item Name";
             this.buttonItemName.UseVisualStyleBackColor = true;
+            this.buttonItemName.Click += new System.EventHandler(this.buttonItemName_Click);
             // 
             // buttonCustomer
             // 
@@ -166,6 +169,7 @@
             this.buttonCustomer.TabIndex = 12;
             this.buttonCustomer.Text = "Customer";
             this.buttonCustomer.UseVisualStyleBackColor = true;
+            this.buttonCustomer.Click += new System.EventHandler(this.buttonCustomer_Click);
             // 
             // buttonSupplier
             // 
@@ -176,12 +180,22 @@
             this.buttonSupplier.TabIndex = 13;
             this.buttonSupplier.Text = "Supplier";
             this.buttonSupplier.UseVisualStyleBackColor = true;
+            this.buttonSupplier.Click += new System.EventHandler(this.buttonSupplier_Click);
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(52, 205);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(0, 13);
+            this.Label1.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 450);
+            this.Controls.Add(this.Label1);
             this.Controls.Add(this.buttonSupplier);
             this.Controls.Add(this.buttonCustomer);
             this.Controls.Add(this.buttonItemName);
@@ -193,11 +207,12 @@
             this.Controls.Add(this.buttonResetMessage);
             this.Controls.Add(this.buttonSelectFile);
             this.Controls.Add(this.FileTextBox);
-            this.Controls.Add(this.CompanyIDlistBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ConpanyIDlistBox);
+            this.Controls.Add(this.labelcompany);
             this.Controls.Add(this.textBoxCompanyName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,8 +221,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxCompanyName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox CompanyIDlistBox;
+        private System.Windows.Forms.Label labelcompany;
+        private System.Windows.Forms.ListBox ConpanyIDlistBox;
         private System.Windows.Forms.TextBox FileTextBox;
         private System.Windows.Forms.Button buttonSelectFile;
         private System.Windows.Forms.Button buttonResetMessage;
@@ -219,6 +234,7 @@
         private System.Windows.Forms.Button buttonItemName;
         private System.Windows.Forms.Button buttonCustomer;
         private System.Windows.Forms.Button buttonSupplier;
+        private System.Windows.Forms.Label Label1;
     }
 }
 
